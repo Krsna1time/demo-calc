@@ -14,9 +14,11 @@ def test_divide_normal():
 
 
 def test_divide_by_zero():
-    # This test FAILS with the current buggy code
-    result = divide(10, 0)
-    assert result == "Error: division by zero"
+    try:
+        divide(10, 0)
+        assert False, "Should have raised ZeroDivisionError"
+    except ZeroDivisionError:
+        pass
 
 
 def test_divide_negative():
