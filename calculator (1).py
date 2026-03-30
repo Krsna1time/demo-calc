@@ -1,6 +1,5 @@
 def divide(a, b):
-    # BUG: no guard against division by zero
-    return a / b
+    return a / b  # BUG: no zero check
 
 
 def add(a, b):
